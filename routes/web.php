@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -29,5 +29,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+
+
+
 //components routes
 Route::get('{path}', 'HomeController@index')->where( 'path' , '([A-z\d\-\/_.]+)?' );
+
+*/
+Route::get('logout', 'AuthController@logout');
+Route::get('/{any?}', function (){
+    return view('welcome');
+})->where('any', '^(?!api\/)[\/\w\.-]*');

@@ -1,0 +1,17 @@
+<?php
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
+use App\Supplier;
+use Faker\Generator as Faker;
+
+$factory->define(Supplier::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'adress' => $faker->address,
+        'phone' => $faker->unique()->phoneNumber,
+        'latitude' => $faker->latitude,
+        'longitude' => $faker->longitude,
+        'user_id' => 1
+    ];
+});

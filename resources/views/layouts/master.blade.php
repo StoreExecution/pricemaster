@@ -170,6 +170,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </p>
                         </router-link>
                     </li>
+
+                    <li class="nav-item">
+                        <router-link to="/products" class="nav-link"  active-class="active" exact >
+                            <i class="nav-icon fas fa-box"></i>
+
+                            <p>
+                                Produits
+
+                            </p>
+                        </router-link>
+                    </li>
                     <li class="nav-item">
                         <router-link to="/settings" class="nav-link"  active-class="active" exact >
                             <i class="nav-icon fas fa-cog"></i>
